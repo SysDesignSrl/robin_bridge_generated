@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>robin_bridge_generated</name>
+  <version>0.2.0</version>
+  <description>A ROS-CODESYS shared memory bridge.</description>
+
+  <maintainer email="henrique.domingos@inesctec.pt">Henrique Domingos</maintainer>
+
+  <license>Apache 2.0</license>
+
+  <!-- <url type="website">http://wiki.ros.org/robin</url> -->
+  <!-- <url type="bugtracker">https://github.com/ros-industrial/robin/issues</url> -->
+  <!-- <url type="repository">https://github.com/ros-industrial/robin</url> -->
+
+  <author email="paulo.d.ribeiro@inesctec.pt">Paulo Diogo Ribeiro</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>robin_bridge</depend>
+  <depend>std_msgs</depend>  
+  <depend>geometry_msgs</depend>
+  <depend>message_generation</depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <export>
+  </export>
+</package>
