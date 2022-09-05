@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   robin_bridge
   std_msgs
+  geometry_msgs
   message_generation
 )
 
@@ -24,6 +25,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  geometry_msgs
 )
 
 
@@ -33,7 +35,7 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp robin_bridge message_generation std_msgs message_runtime
+  CATKIN_DEPENDS roscpp robin_bridge message_generation std_msgs geometry_msgs message_runtime
 )
 
 ###########
