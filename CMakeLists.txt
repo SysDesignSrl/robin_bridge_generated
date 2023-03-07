@@ -7,6 +7,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   robin_bridge
   std_msgs
+  geometry_msgs
+  message_generation
 )
 
 
@@ -14,14 +16,17 @@ find_package(catkin REQUIRED COMPONENTS
 ## Declare ROS messages, services and actions ##
 ################################################
 
-# add_message_files(
-#  FILES
-#)
+add_message_files(
+  FILES
+  CommonCommand.msg
+  CommonFeedback.msg
+)
 
-# generate_messages(
-#  DEPENDENCIES
-#)
-
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+  geometry_msgs
+)
 
 ###################################
 ## catkin specific configuration ##
@@ -29,6 +34,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package(
   INCLUDE_DIRS include
+  CATKIN_DEPENDS roscpp robin_bridge message_generation std_msgs geometry_msgs message_runtime
 )
 
 ###########
