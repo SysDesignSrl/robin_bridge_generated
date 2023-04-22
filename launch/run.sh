@@ -20,7 +20,7 @@ if [ $? -eq 0 ]; then
     echo
     echo "[ INFO]: Starting robin bridge ..."
     echo
-    rosrun robin_bridge_generated robin_node_generated
+    roslaunch robin_bridge_generated robin_node_generated.launch
 else
     echo
     echo "[ ERROR]: restarting codesyscontrol service"

@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<launch>
+    <node name="robin" pkg="robin_bridge_generated" type="robin_node_generated">
+        <remap from="~object_code_01"  to="dsr01/robin/object_code"/>
+        <remap from="~process_code_01" to="dsr01/robin/process_code"/>
+        <remap from="~robot_run_01"    to="dsr01/robin/robot_run"/>
+        <remap from="~run_01"          to="dsr01/robin/run"/>
+        <remap from="~object_code_02"  to="dsr02/robin/object_code"/>
+        <remap from="~process_code_02" to="dsr02/robin/process_code"/>
+        <remap from="~robot_run_02"    to="dsr02/robin/robot_run"/>
+        <remap from="~run_02"          to="dsr02/robin/run"/>
+    </node>
+</launch>
