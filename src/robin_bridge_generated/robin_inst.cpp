@@ -9,6 +9,7 @@
 #include "robin_bridge_generated/PalletizingOptions.h"
 #include "std_msgs/Bool.h"
 #include "std_msgs/Int32.h"
+#include "sensor_msgs/JointState.h"
 template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions>::read()
 {
   // char[] to std::string
@@ -25,7 +26,7 @@ template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::Palle
   msg_.transform_name = (*shm_ptr_).transform_name;
   // END char[] to std::string
 }
-template<> void RobinPublisher<JointState, robin_bridge_generated::JointState>::read()
+template<> void RobinPublisher<JointState, sensor_msgs::JointState>::read()
 {
   msg_.header.seq = (*shm_ptr_).header.seq;
   // pod struct to pod struct
@@ -62,4 +63,4 @@ template class RobinSubscriber<CommonCommand, robin_bridge_generated::CommonComm
 template class RobinPublisher<uint8_t, std_msgs::Bool>;
 template class RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions>;
 template class RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback>;
-template class RobinPublisher<JointState, robin_bridge_generated::JointState>;
+template class RobinPublisher<JointState, sensor_msgs::JointState>;

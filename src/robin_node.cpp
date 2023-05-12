@@ -17,8 +17,8 @@ int main(int argc, char **argv)
   RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions> rgt_palletizing_options_02(nh, "rgt_palletizing_options_02");
   RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback> lifter_controller_feedback_01(nh, "lifter_controller_feedback_01");
   RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback> lifter_controller_feedback_02(nh, "lifter_controller_feedback_02");
-  RobinPublisher<JointState, robin_bridge_generated::JointState> lifter_controller_joint_states_01(nh, "lifter_controller_joint_states_01");
-  RobinPublisher<JointState, robin_bridge_generated::JointState> lifter_controller_joint_states_02(nh, "lifter_controller_joint_states_02");
+  RobinPublisher<JointState, sensor_msgs::JointState> lifter_controller_joint_states_01(nh, "lifter_controller_joint_states_01");
+  RobinPublisher<JointState, sensor_msgs::JointState> lifter_controller_joint_states_02(nh, "lifter_controller_joint_states_02");
   ROS_INFO("Robin node initiated...");
   ros::spin();
   return 0;
