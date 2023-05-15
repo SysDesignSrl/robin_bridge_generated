@@ -28,7 +28,7 @@ struct Time
   uint32_t secs;
   uint32_t nsecs;
 };
-struct Header_
+struct Header
 {
   uint32_t seq;
   Time stamp;
@@ -36,7 +36,7 @@ struct Header_
 };
 struct JointState
 {
-  Header_ header;
+  Header header;
   char name[20][81];
   double position[20];
   double velocity[20];

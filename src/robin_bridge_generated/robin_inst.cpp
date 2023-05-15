@@ -5,11 +5,10 @@
 #include <robin_bridge_generated/structs.h>
 #include "robin_bridge_generated/CommonCommand.h"
 #include "robin_bridge_generated/CommonFeedback.h"
-#include "robin_bridge_generated/JointState.h"
 #include "robin_bridge_generated/PalletizingOptions.h"
+#include "sensor_msgs/JointState.h"
 #include "std_msgs/Bool.h"
 #include "std_msgs/Int32.h"
-#include "sensor_msgs/JointState.h"
 template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions>::read()
 {
   // char[] to std::string

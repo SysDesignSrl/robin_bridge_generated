@@ -18,11 +18,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(
   FILES
-  PalletizingOptions.msg
   CommonCommand.msg
+  PalletizingOptions.msg
   CommonFeedback.msg
-  Header_.msg
-  JointState.msg
 )
 
 generate_messages(
@@ -38,7 +36,7 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp robin_bridge message_generation message_runtime std_msgs sensor_msgs
+  CATKIN_DEPENDS roscpp robin_bridge std_msgs sensor_msgs message_runtime
 )
 
 ###########
