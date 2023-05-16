@@ -11,6 +11,7 @@
 #include "std_msgs/Int32.h"
 template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions>::read()
 {
+  msg_.skip = (*shm_ptr_).skip;
   // char[] to std::string
   msg_.tool_name = (*shm_ptr_).tool_name;
   // END char[] to std::string
@@ -24,6 +25,7 @@ template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::Palle
   // char[] to std::string
   msg_.transform_name = (*shm_ptr_).transform_name;
   // END char[] to std::string
+  msg_.start_index = (*shm_ptr_).start_index;
 }
 template<> void RobinPublisher<JointState, sensor_msgs::JointState>::read()
 {

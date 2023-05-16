@@ -9,11 +9,13 @@ struct CommonCommand
 };
 struct PalletizingOptions
 {
+  uint8_t skip;
   char tool_name[81];
   char object_name[81];
   double object_weight;
   char pattern_file[256];
   char transform_name[81];
+  int32_t start_index;
 };
 struct CommonFeedback
 {

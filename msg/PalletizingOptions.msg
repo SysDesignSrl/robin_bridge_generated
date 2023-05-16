@@ -1,3 +1,5 @@
+bool skip
+
 ## Tool
 
 string tool_name
@@ -23,3 +25,5 @@ string pattern_file
 
 string transform_name
   # The transform (aka. layer) to activate before starting the palletizing task
+
+int32 start_index
