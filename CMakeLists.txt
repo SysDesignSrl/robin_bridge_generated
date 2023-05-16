@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(robin_bridge_generated)
 
-add_compile_options(-std=c++11)
+add_compile_options(-std=c++14)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -19,8 +19,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   CommonCommand.msg
-  PalletizingOptions.msg
   CommonFeedback.msg
+  PalletizingOptions.msg
 )
 
 generate_messages(
