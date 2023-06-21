@@ -1,5 +1,7 @@
 bool skip
   # Skip this configuration and continue.
+bool skip_object
+  # Skip the current object and continue.
 
 ## Tool
 string tool_name

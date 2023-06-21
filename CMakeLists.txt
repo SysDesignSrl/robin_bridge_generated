@@ -36,7 +36,12 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp robin_bridge std_msgs sensor_msgs message_runtime
+  CATKIN_DEPENDS 
+    roscpp 
+    robin_bridge 
+    std_msgs 
+    sensor_msgs 
+    message_runtime
 )
 
 ###########

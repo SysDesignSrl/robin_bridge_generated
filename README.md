@@ -3,6 +3,11 @@
 ## Overview
 Shared memory bridge to map CODESYS variables to ROS topics and viceversa.
 
+## Continuous Integration
+| Branch   | Status                                                                                                                                                                                              |
+|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| pallcube |[![CI](https://github.com/SysDesignSrl/robin_bridge_generated/actions/workflows/ci.yaml/badge.svg?branch=pallcube)](https://github.com/SysDesignSrl/robin_bridge_generated/actions/workflows/ci.yaml)|
+
 ## Nodes
 robin \
   _Node running the shared memory communication._
