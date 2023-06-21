@@ -11,6 +11,7 @@ struct PalletizingOptions
 {
   uint8_t skip;
   char tool_name[81];
+  uint8_t skip_object;
   char object_name[81];
   double object_weight;
   char pattern_file[256];
@@ -39,7 +40,7 @@ struct Header
 struct JointState
 {
   Header header;
-  char name[20][81];
+  char name[1][81];
   double position[20];
   double velocity[20];
   double effort[20];

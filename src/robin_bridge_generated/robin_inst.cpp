@@ -15,6 +15,7 @@ template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::Palle
   // char[] to std::string
   msg_.tool_name = (*shm_ptr_).tool_name;
   // END char[] to std::string
+  msg_.skip_object = (*shm_ptr_).skip_object;
   // char[] to std::string
   msg_.object_name = (*shm_ptr_).object_name;
   // END char[] to std::string

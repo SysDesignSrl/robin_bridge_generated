@@ -13,6 +13,8 @@ string object_name
   # Required to compute the picking point.
 float64 object_weight
   # The object's weight expressed in [Kg]
+bool skip_object
+  # Used to skip specific object during pick/place motion.
 
 ## Pattern Manager
 string pattern_file
