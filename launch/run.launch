@@ -1,5 +1,16 @@
 <?xml version='1.0'?>
+<!-- 
+ Launch file for robin_bridge_generated
+ Takes 1 argument:
+    - restart_codesys: 0=NO RESTART  1=FORCE RESTART
+
+ Launch execution from command line:
+ roslaunch robin_bridge_generated run.launch restart_codesys:=<restart_value>
+-->
 <launch>
-    <node name='robin_bridge_generated' pkg='robin_bridge_generated' type='run.sh' output='screen'>
+    <!-- argument used to force codesys restart -->
+    <arg name="restart_codesys" default="1" />
+
+    <node name='robin_bridge_generated' pkg='robin_bridge_generated' type='run.sh' output='screen' args='$(arg restart_codesys)'>
     </node>
 </launch>
