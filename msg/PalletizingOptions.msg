@@ -21,6 +21,8 @@ string pattern_file
   # The path to the file containing the pattern to load.
 string transform_name
   # The transform (aka. layer) to activate before starting the palletizing task.
+bool reload_pattern
+  # Reload the pattern and reactivate the layer.
 
 int32 start_index
   # Skip first n indexes before start iterating on a new layer. (default: 0)
