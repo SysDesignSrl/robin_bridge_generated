@@ -41,8 +41,8 @@ struct JointState
 {
   Header header;
   char name[1][81];
-  double position[20];
-  double velocity[20];
-  double effort[20];
+  double position[1];
+  double velocity[1];
+  double effort[1];
 };
 #endif
