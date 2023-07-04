@@ -26,6 +26,7 @@ template<> void RobinPublisher<PalletizingOptions, robin_bridge_generated::Palle
   // char[] to std::string
   msg_.transform_name = (*shm_ptr_).transform_name;
   // END char[] to std::string
+  msg_.reload_pattern = (*shm_ptr_).reload_pattern;
   msg_.start_index = (*shm_ptr_).start_index;
 }
 template<> void RobinPublisher<JointState, sensor_msgs::JointState>::read()

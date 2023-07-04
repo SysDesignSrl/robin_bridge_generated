@@ -16,6 +16,7 @@ struct PalletizingOptions
   double object_weight;
   char pattern_file[256];
   char transform_name[81];
+  uint8_t reload_pattern;
   int32_t start_index;
 };
 struct CommonFeedback

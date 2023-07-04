@@ -3,24 +3,30 @@
 # Bash script for starting robin bridge generated node in ROS
 # Script arguments:
 # - restart_codesys: 0=NO RESTART  1=RESTART
-
-# first check if rosmaster is already running
-rosPid=`/bin/ps -fu $USER| grep "rosmaster" | grep -v "grep" | awk '{print $2}'`
-
-if [ -z ${rosPid} ]; then
-
-    echo "[INFO]: rosmaster is not running"
-
-else
-
-    echo "[INFO]: rosmaster is running on PID ${rosPid}"
-    echo "[WARN]: killing rosmaster..."
-
-    kill ${rosPid}
-
-fi
+# - kill_rosmaster: 0=NO  1=YES
 
 restartCodesys=$1
+killRosmaster=$2
+
+if [ $killRosmaster -eq 1 ]; then
+
+    # first check if rosmaster is already running
+    rosPid=`/bin/ps -fu $USER| grep "rosmaster" | grep -v "grep" | awk '{print $2}'`
+
+    if [ -z ${rosPid} ]; then
+
+        echo "[INFO]: rosmaster is not running"
+
+    else
+
+        echo "[INFO]: rosmaster is running on PID ${rosPid}"
+        echo "[WARN]: killing rosmaster..."
+
+        kill ${rosPid}
+
+    fi
+
+fi
 
 echo
 echo "[INFO]: sourcing setup bash"
