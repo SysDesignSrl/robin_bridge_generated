@@ -48,4 +48,4 @@ robin \
 ### Camera Topics
 #### Subscribed
 ~camera_msg ([robin_bridge_generatd/CameraMsg](https://github.com/SysDesignSrl/robin_bridge_generated/blob/brooks/msg/CameraMsg.msg)) \
-  _Info message from camera_)
+  _Info message from camera_
