@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<launch>
+    <node name="robin" pkg="robin_bridge_generated" type="robin_node_generated">
+        <remap from="~camera_msg"    to="/object_recognition/camera_msg" />
+    </node>
+</launch>
