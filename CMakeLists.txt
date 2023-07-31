@@ -19,6 +19,7 @@ add_message_files(
   FILES
   CommonCommand.msg
   CommonFeedback.msg
+  CameraMsg.msg
 )
 
 generate_messages(

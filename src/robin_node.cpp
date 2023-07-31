@@ -10,6 +10,7 @@ int main(int argc, char **argv)
   RobinSubscriber<uint8_t, std_msgs::Bool> gripper_command(nh, "gripper_command");
   RobinSubscriber<CommonCommand, robin_bridge_generated::CommonCommand> conveyor_1_command(nh, "conveyor_1_command");
   RobinSubscriber<CommonCommand, robin_bridge_generated::CommonCommand> conveyor_2_command(nh, "conveyor_2_command");
+  RobinSubscriber<CameraMsg, robin_bridge_generated::CameraMsg> camera_msg(nh, "camera_msg");
   RobinPublisher<uint8_t, std_msgs::Bool> run(nh, "run");
   RobinPublisher<uint8_t, std_msgs::Bool> gripper_feedback(nh, "gripper_feedback");
   RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback> conveyor_1_feedback(nh, "conveyor_1_feedback");
