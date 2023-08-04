@@ -16,7 +16,7 @@ struct Header
 {
   uint32_t seq;
   Time stamp;
-  char frame_id[84];
+  char frame_id[81];
 };
 struct CameraMsg
 {
@@ -31,5 +31,10 @@ struct CommonFeedback
   uint8_t aborted;
   uint8_t error;
   int32_t error_id;
+};
+struct PlcMsg
+{
+  Header header;
+  uint8_t tube_detected;
 };
 #endif

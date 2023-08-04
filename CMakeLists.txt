@@ -18,8 +18,9 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   CommonCommand.msg
-  CommonFeedback.msg
   CameraMsg.msg
+  CommonFeedback.msg
+  PlcMsg.msg
 )
 
 generate_messages(
@@ -60,3 +61,4 @@ target_link_libraries(robin_node_generated
   ${catkin_LIBRARIES}
   robin_inst_generated
 )
+
