@@ -13,18 +13,38 @@ robin \
   _Node running the shared memory communication._
 
 ### Subscribed Topics
-ROBOT_ID/robin/process_code ([std_msgs/Int32](http://docs.ros.org/en/api/std_msgs/html/msg/Int32.html)) \
-  _A code representing the status of task execution._
+ROBOT_ID/diagnostics ([diagnostic_msgs/DiagnosticArray](http://docs.ros.org/en/noetic/api/diagnostic_msgs/html/msg/DiagnosticArray.html)) \
+  _Robot diagnostics stream._
 
 ### Published Topics
 ROBOT_ID/robin/run ([std_msgs/Bool](http://docs.ros.org/en/api/std_msgs/html/msg/Bool.html)) \
-  _Enable the palletizing task execution._
+  _Enable task execution._
 
 ROBOT_ID/robin/lft/palletizing_options ([robin_bridge_generated/PalletizingOptions](https://github.com/SysDesignSrl/robin_bridge_generated/blob/pallcube/msg/PalletizingOptions.msg)) \
   _The palletizing options for the left side._
 
 ROBOT_ID/robin/rgt/palletizing_options ([robin_bridge_generated/PalletizingOptions](https://github.com/SysDesignSrl/robin_bridge_generated/blob/pallcube/msg/PalletizingOptions.msg)) \
   _The palletizing options for the right side._
+
+### Process Code Topics
+#### Subscribed
+ROBOT_ID/robin/process_code ([std_msgs/Int32](http://docs.ros.org/en/api/std_msgs/html/msg/Int32.html)) \
+  _A code representing the status of task execution._
+
+#### Published
+ROBOT_ID/robin/process_code_ack ([std_msgs/Int32](http://docs.ros.org/en/api/std_msgs/html/msg/Int32.html)) \
+  _The acknowledge of the status of task execution._
+
+<!-- 
+### Semaphores Topics
+#### Subscribed
+ROBOT_ID/robin/picking/request ([std_msgs/Bool](http://docs.ros.org/en/api/std_msgs/html/msg/Bool.html)) \
+  _Picking execution request._
+
+#### Published
+ROBOT_ID/robin/picking/consensus ([std_msgs/Bool](http://docs.ros.org/en/api/std_msgs/html/msg/Bool.html)) \
+  _Picking execution consensus._ 
+-->
 
 ### Lifter Topics
 #### Subscribed
