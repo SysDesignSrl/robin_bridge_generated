@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   robin_bridge
   std_msgs
+  diagnostic_msgs
   sensor_msgs
   message_generation
 )
@@ -26,6 +27,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  diagnostic_msgs
   sensor_msgs
 )
 
@@ -40,7 +42,8 @@ catkin_package(
     roscpp 
     robin_bridge 
     std_msgs 
-    sensor_msgs 
+    sensor_msgs
+    diagnostic_msgs 
     message_runtime
 )
 

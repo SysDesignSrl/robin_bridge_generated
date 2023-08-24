@@ -9,6 +9,8 @@ int main(int argc, char **argv)
   RobinSubscriber<int32_t, std_msgs::Int32> process_code_02(nh, "process_code_02");
   RobinSubscriber<CommonCommand, robin_bridge_generated::CommonCommand> lifter_controller_command_01(nh, "lifter_controller_command_01");
   RobinSubscriber<CommonCommand, robin_bridge_generated::CommonCommand> lifter_controller_command_02(nh, "lifter_controller_command_02");
+  RobinSubscriber<DiagnosticArray, diagnostic_msgs::DiagnosticArray> diagnostics_01(nh, "diagnostics_01");
+  RobinSubscriber<DiagnosticArray, diagnostic_msgs::DiagnosticArray> diagnostics_02(nh, "diagnostics_02");
   RobinPublisher<uint8_t, std_msgs::Bool> run_01(nh, "run_01");
   RobinPublisher<uint8_t, std_msgs::Bool> run_02(nh, "run_02");
   RobinPublisher<PalletizingOptions, robin_bridge_generated::PalletizingOptions> lft_palletizing_options_01(nh, "lft_palletizing_options_01");
@@ -19,6 +21,8 @@ int main(int argc, char **argv)
   RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback> lifter_controller_feedback_02(nh, "lifter_controller_feedback_02");
   RobinPublisher<JointState, sensor_msgs::JointState> lifter_controller_joint_states_01(nh, "lifter_controller_joint_states_01");
   RobinPublisher<JointState, sensor_msgs::JointState> lifter_controller_joint_states_02(nh, "lifter_controller_joint_states_02");
+  RobinPublisher<int32_t, std_msgs::Int32> process_code_ack_01(nh, "process_code_ack_01");
+  RobinPublisher<int32_t, std_msgs::Int32> process_code_ack_02(nh, "process_code_ack_02");
   ROS_INFO("Robin node initiated...");
   ros::spin();
   return 0;

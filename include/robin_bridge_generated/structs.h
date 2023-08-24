@@ -7,6 +7,24 @@ struct CommonCommand
   uint8_t abort;
   int32_t id;
 };
+struct KeyValue
+{
+  char key[81];
+  char value[81];
+};
+struct DiagnosticStatus
+{
+  uint8_t level;
+  char name[81];
+  char message[81];
+  char hardware_id[81];
+  KeyValue values[20];
+};
+struct DiagnosticArray
+{
+  Header header;
+  DiagnosticStatus status[20];
+};
 struct PalletizingOptions
 {
   uint8_t skip;
