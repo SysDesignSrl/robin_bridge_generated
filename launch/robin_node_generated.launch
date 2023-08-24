@@ -4,19 +4,23 @@
         <!-- dsr01 -->
         <remap from="~run_01"                               to="dsr01/robin/run" />
         <remap from="~process_code_01"                      to="dsr01/robin/process_code" />
+        <remap from="~process_code_ack_01"                  to="dsr01/robin/process_code_ack" />
         <remap from="~lft_palletizing_options_01"           to="dsr01/robin/lft/palletizing_options" />
         <remap from="~rgt_palletizing_options_01"           to="dsr01/robin/rgt/palletizing_options" />
         <remap from="~lifter_controller_command_01"         to="dsr01/robin/lifter_controller/command" />
         <remap from="~lifter_controller_feedback_01"        to="dsr01/robin/lifter_controller/feedback" />
         <remap from="~lifter_controller_joint_states_01"    to="dsr01/robin/lifter_controller/joint_states" />
+        <remap from="~diagnostics_01"                       to="dsr01/robin/diagnostics" />
 
         <!-- dsr02 -->
         <remap from="~run_02"                               to="dsr02/robin/run" />
         <remap from="~process_code_02"                      to="dsr02/robin/process_code" />
+        <remap from="~process_code_ack_02"                  to="dsr02/robin/process_code_ack" />
         <remap from="~lft_palletizing_options_02"           to="dsr02/robin/lft/palletizing_options" />
         <remap from="~rgt_palletizing_options_02"           to="dsr02/robin/rgt/palletizing_options" />
         <remap from="~lifter_controller_command_02"         to="dsr02/robin/lifter_controller/command" />
         <remap from="~lifter_controller_feedback_02"        to="dsr02/robin/lifter_controller/feedback" />
         <remap from="~lifter_controller_joint_states_02"    to="dsr02/robin/lifter_controller/joint_states" />
+        <remap from="~diagnostics_02"                       to="dsr02/robin/diagnostics" />
     </node>
 </launch>
