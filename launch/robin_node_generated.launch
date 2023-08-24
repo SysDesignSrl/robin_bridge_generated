@@ -10,7 +10,8 @@
         <remap from="~lifter_controller_command_01"         to="dsr01/robin/lifter_controller/command" />
         <remap from="~lifter_controller_feedback_01"        to="dsr01/robin/lifter_controller/feedback" />
         <remap from="~lifter_controller_joint_states_01"    to="dsr01/robin/lifter_controller/joint_states" />
-        <remap from="~diagnostics_01"                       to="dsr01/robin/diagnostics" />
+        
+        <remap from="~diagnostics_01"                       to="dsr01/diagnostics" />
 
         <!-- dsr02 -->
         <remap from="~run_02"                               to="dsr02/robin/run" />
@@ -21,6 +22,7 @@
         <remap from="~lifter_controller_command_02"         to="dsr02/robin/lifter_controller/command" />
         <remap from="~lifter_controller_feedback_02"        to="dsr02/robin/lifter_controller/feedback" />
         <remap from="~lifter_controller_joint_states_02"    to="dsr02/robin/lifter_controller/joint_states" />
-        <remap from="~diagnostics_02"                       to="dsr02/robin/diagnostics" />
+
+        <remap from="~diagnostics_02"                       to="dsr02/diagnostics" />
     </node>
 </launch>
