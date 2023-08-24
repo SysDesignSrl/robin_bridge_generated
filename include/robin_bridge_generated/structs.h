@@ -7,6 +7,17 @@ struct CommonCommand
   uint8_t abort;
   int32_t id;
 };
+struct Time
+{
+  uint32_t secs;
+  uint32_t nsecs;
+};
+struct Header
+{
+  uint32_t seq;
+  Time stamp;
+  char frame_id[84];
+};
 struct KeyValue
 {
   char key[81];
@@ -44,17 +55,6 @@ struct CommonFeedback
   uint8_t aborted;
   uint8_t error;
   int32_t error_id;
-};
-struct Time
-{
-  uint32_t secs;
-  uint32_t nsecs;
-};
-struct Header
-{
-  uint32_t seq;
-  Time stamp;
-  char frame_id[84];
 };
 struct JointState
 {
