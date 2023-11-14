@@ -3,12 +3,20 @@
 #include <robin_bridge/robin_publisher.hpp>
 #include <robin_bridge/robin_subscriber.hpp>
 #include <robin_bridge_generated/structs.h>
-#include "geometry_msgs/Pose.h"
 #include "robin_bridge_generated/CommonCommand.h"
 #include "robin_bridge_generated/CommonFeedback.h"
 #include "std_msgs/Bool.h"
+#include "std_msgs/Int32.h"
+#include "std_msgs/String.h"
+template<> void RobinPublisher<char[81], std_msgs::String>::read()
+{
+  // char[] to std::string
+  msg_.data = (*shm_ptr_);
+  // END char[] to std::string
+}
 template class RobinSubscriber<uint8_t, std_msgs::Bool>;
+template class RobinSubscriber<int32_t, std_msgs::Int32>;
 template class RobinSubscriber<CommonCommand, robin_bridge_generated::CommonCommand>;
 template class RobinPublisher<uint8_t, std_msgs::Bool>;
 template class RobinPublisher<CommonFeedback, robin_bridge_generated::CommonFeedback>;
-template class RobinPublisher<Pose, geometry_msgs::Pose>;
+template class RobinPublisher<char[81], std_msgs::String>;

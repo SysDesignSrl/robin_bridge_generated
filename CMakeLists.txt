@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 2.8.3)
 project(robin_bridge_generated)
 
 add_compile_options(-std=c++11)
@@ -7,7 +7,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   robin_bridge
   std_msgs
-  geometry_msgs
   message_generation
 )
 
@@ -25,7 +24,6 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
-  geometry_msgs
 )
 
 
@@ -35,7 +33,7 @@ generate_messages(
 
 catkin_package(
   INCLUDE_DIRS include
-  CATKIN_DEPENDS roscpp robin_bridge message_generation std_msgs geometry_msgs message_runtime
+  CATKIN_DEPENDS roscpp robin_bridge message_generation std_msgs message_runtime
 )
 
 ###########
@@ -61,3 +59,4 @@ target_link_libraries(robin_node_generated
   ${catkin_LIBRARIES}
   robin_inst_generated
 )
+
